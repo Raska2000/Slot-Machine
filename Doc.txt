@@ -1,1 +1,35 @@
+Documentație pentru Jocul de Slot Machine
+Descriere Generală:
+Aplicația este o reprezentare a jocului Slot Machine, programată în Python folosind biblioteca Tkinter pentru interfața grafică. Jocul include funcționalități precum înregistrarea utilizatorilor, autentificarea, amestecarea imaginilor și actualizarea soldului utilizatorului în funcție de rezultatul imaginilor.
+
+Elemente cheie ale Codului:
+1. Clasa SlotMachine:
+Această clasă reprezintă fereastra principală a aplicației și este derivată din clasa Tk din Tkinter.
+Elemente esentiale:
+•	symbols: Listă de simboluri utilizate în joc ( "Cireasa", "Lamaie", "Portocala",  "Pruna",  "Capsuna ", "Mar",  ).
+•	image_paths: Dicționar care mapează numele simbolurilor la locatiile fișierelor de imagine corespunzătoare.
+•	reels: Listă bidimensional reprezentând imaginile slot machine-ului.
+•	images: Listă bidimensional de obiecte PhotoImage corespunzătoare imaginilor simbolurilor de pe sloturi.
+•	labels: Listă bidimensional de obiecte Label Tkinter pentru a afișa imaginile în interfața grafică.
+•	win_sound: Fișierul audio pentru sunetul de câștig.
+•	spin_sound: Fișierul audio pentru sunetul de învârtire a sloturilor.
+•	logged_in_user: Numele utilizatorului autentificat în prezent.
+•	logged_in_user_balance: Soldul curent al utilizatorului autentificat.
+Metode Principale:
+•	spin_reels(): Inițiază o nouă învârtire a rolelor, actualizează imaginile și verifică dacă există o combinație câștigătoare.
+•	update_images(result): Actualizează imaginile cu cele furnizate în parametrul result.
+•	check_win(result): Verifică dacă există o combinație câștigătoare în rezultatul furnizat.
+•	show_win_message(symbol): Afișează un mesaj de câștig și actualizează soldul utilizatorului.
+•	show_no_win_message(): Afișează un mesaj de pierdere și actualizează soldul utilizatorului.
+•	play_sound(sound): Redă un fișier audio dat.
+2. Metode de Autentificare și Înregistrare:
+•	load_user_data(): Încarcă datele utilizatorilor din fișierul "users.txt".
+•	save_user_data(): Salvează datele utilizatorilor înapoi în fișierul "users.txt".
+•	show_login_window(): Afișează o fereastră de autentificare.
+•	show_signup_window(): Afișează o fereastră de înregistrare.
+•	login(username, password, login_window): Verifică autentificarea utilizatorului și afișează mesaje corespunzătoare.
+•	signup(username, password, confirm_password, signup_window): Realizează procesul de înregistrare a unui utilizator.
+3. Actualizarea Interfeței Grafice:
+•	update_balance_label(): Actualizează labelul de sold și salvează modificările în fișierul de utilizatori.
+•	random_symbol(): Reafiseaza imaginile aleatoriu
 
